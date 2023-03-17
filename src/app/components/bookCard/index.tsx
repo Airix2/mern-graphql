@@ -114,7 +114,11 @@ const BookCard = () => {
 					/>
 				</SmallIcon>
 				{isStartCalendarOpen && (
-					<DateCalendar value={startDate} onChange={setStartDate} />
+					<DateCalendar
+						minDate={new Date()}
+						value={startDate}
+						onChange={setStartDate}
+					/>
 				)}
 			</ItemContainer>
 			<LineSeparator />
@@ -131,6 +135,7 @@ const BookCard = () => {
 				{isEndCalendarOpen && (
 					<DateCalendar
 						offset={true}
+						minDate={new Date()}
 						value={endDate}
 						onChange={setEndDate}
 					/>
