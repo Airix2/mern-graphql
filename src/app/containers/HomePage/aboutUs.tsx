@@ -10,7 +10,7 @@ const AboutUsContainer = styled.div`
 		flex
 		flex-wrap
 		items-center
-		2xl:justify-center
+		justify-center
 		py-4
 		px-7
 		md:px-0
@@ -29,25 +29,40 @@ const CarContainer = styled.div`
 	}
 
 	@media (min-width: ${SCREENS.md}) {
-		height: 28em;
+		height: 24em;
 	}
 	@media (min-width: ${SCREENS.lg}) {
-		height: 30em;
-	}
-	@media (min-width: ${SCREENS["2xl"]}) {
-		height: 35em;
-		margin-left: 0;
+		height: 27em;
+		margin-left: -40px;
 	}
 `;
 
 const InfoContainer = styled.div`
 	${tw`
-		
+		md:w-1/2
+		flex
+		flex-col
+		md:ml-6
+		2xl:ml-6
 	`}
 `;
-const Title = styled.div`
+const Title = styled.h1`
 	${tw`
-		
+		text-black
+		text-2xl
+		md:text-5xl
+		font-extrabold
+		md:font-black
+		md:leading-normal
+	`}
+`;
+const InfoText = styled.p`
+	${tw`
+		md:max-w-2xl
+		text-sm
+		md:text-base
+		text-gray-500
+		mt-4
 	`}
 `;
 
@@ -58,7 +73,19 @@ const AboutUs = () => {
 				<img src={JeepImg} alt="" />
 			</CarContainer>
 			<InfoContainer>
-				<Title>aa</Title>
+				<Title>Get The Best Experience with Our Rental Deals</Title>
+				<InfoText>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Reprehenderit totam facilis ex atque ipsum quaerat quia
+					exercitationem reiciendis provident obcaecati aspernatur,
+					architecto est ratione fugit magnam ad facere autem quam
+					fugiat repudiandae tempore dolorem, odit doloribus
+					recusandae. Commodi perferendis ratione ipsa, at veniam ab
+					optio facilis, est modi numquam nulla fugiat repudiandae
+					tempore dolorem, odit doloribus recusandae. Commodi
+					perferendis ratione ipsa, at veniam ab optio facilis, est
+					modi numquam nulla.
+				</InfoText>
 			</InfoContainer>
 		</AboutUsContainer>
 	);

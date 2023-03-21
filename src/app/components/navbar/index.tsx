@@ -24,7 +24,7 @@ export function Navbar() {
 	return (
 		<NavbarContainer>
 			<LogoContainer>
-				<Logo />
+				<Logo color="dark" />
 			</LogoContainer>
 			<NavItems />
 		</NavbarContainer>
